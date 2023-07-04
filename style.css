@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background: hsl(210, 46%, 95%);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+}
+main .card {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px -10px hsl(212, 23%, 69%);
+}
+@media only screen and (min-width: 600px) {
+  main .card {
+    flex-flow: row;
+    max-width: 50rem;
+    height: 20rem;
+    height: auto;
+    align-items: stretch;
+    justify-content: start;
+    overflow: visible;
+  }
+}
+main .card .drawerImg {
+  height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+@media only screen and (min-width: 600px) {
+  main .card .drawerImg {
+    height: auto;
+    width: 20rem;
+    -o-object-position: left;
+       object-position: left;
+    border-radius: 10px 0 0 10px;
+  }
+}
+main .card .about {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 1rem 2.2rem;
+  background: white;
+  border-radius: inherit;
+}
+@media only screen and (min-width: 600px) {
+  main .card .about {
+    flex: 1;
+  }
+}
+main .card .about .heading {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  color: hsl(217, 19%, 35%);
+}
+@media only screen and (min-width: 600px) {
+  main .card .about .heading {
+    font-size: 1.4rem;
+  }
+}
+main .card .about .description {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: hsl(214, 17%, 51%);
+}
+main .card .about .user_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+main .card .about .user_info .user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main .card .about .user_info .user .avatar {
+  width: 2.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+main .card .about .user_info .user .caption .name {
+  font-size: 0.8rem;
+  color: hsl(217, 19%, 35%);
+}
+main .card .about .user_info .user .caption .date {
+  font-size: 0.8rem;
+  color: hsl(212, 23%, 69%);
+}
+main .card .about .user_info .share {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  main .card .about .user_info .share {
+    display: none;
+  }
+}
+main .card .about .user_info .share .social_handles {
+  position: absolute;
+  top: 0;
+  width: 17rem;
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 10px;
+  scale: 0;
+  opacity: 0;
+  visibility: hidden;
+  visibility: visible;
+  cursor: auto;
+}
+main .card .about .user_info .share .social_handles::after {
+  content: "";
+  position: absolute;
+  width: 1.3rem;
+  aspect-ratio: 1;
+  background: inherit;
+  rotate: 45deg;
+  bottom: -15%;
+  transition: inherit;
+}
+@media only screen and (max-width: 600px) {
+  main .card .about .user_info .share .social_handles::after {
+    display: none;
+  }
+}
+main .card .about .user_info .share .social_handles span {
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+}
+main .card .about .user_info .share .social_handles img {
+  cursor: pointer;
+}
+
+.share_mobile {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+@media only screen and (min-width: 600px) {
+  .share_mobile {
+    display: none;
+  }
+}
+
+.social_handles_Mobile {
+  position: absolute;
+  bottom: -5rem;
+  width: 100%;
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.8rem;
+  opacity: 0;
+  visibility: hidden;
+  cursor: auto;
+  transition: all 0.5s cubic-bezier(0.03, 0.01, 0, 1);
+}
+.social_handles_Mobile span {
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+}
+.social_handles_Mobile img {
+  cursor: pointer;
+}
+
+footer {
+  background: inherit;
+}
+
+.active {
+  display: flex !important;
+  top: -5rem !important;
+  scale: 1 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.share_active {
+  background: hsl(214, 17%, 51%);
+}
+.share_active path {
+  fill: hsl(210, 46%, 95%);
+}
+
+.activee {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}/*# sourceMappingURL=style.css.map */
