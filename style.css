@@ -146,6 +146,7 @@ main .card .about .user_info .share .social_handles {
   visibility: hidden;
   visibility: visible;
   cursor: auto;
+  transition: all 0.5s cubic-bezier(0.03, 0.01, 0, 1);
 }
 main .card .about .user_info .share .social_handles::after {
   content: "";

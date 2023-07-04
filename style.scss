@@ -144,6 +144,7 @@ main {
             visibility: hidden;
             visibility: visible;
             cursor: auto;
+            transition: all 0.5s cubic-bezier(0.03, 0.01, 0, 1);
             // pointer-events: none;
             &::after {
               content: "";
@@ -200,7 +201,7 @@ main {
   justify-content: start;
   align-items: center;
   gap: 1.2rem;
-  padding: 1.8rem;  
+  padding: 1.8rem;
   opacity: 0;
   visibility: hidden;
   cursor: auto;
@@ -243,7 +244,7 @@ footer {
 }
 
 .activee {
-  bottom: 0;  
+  bottom: 0;
   opacity: 1;
   visibility: visible;
 }
